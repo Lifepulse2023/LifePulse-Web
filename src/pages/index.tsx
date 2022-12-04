@@ -1,5 +1,7 @@
+import Tabs from '@common/Tabs'
 import type { NextPage } from 'next'
-import Head from 'next/head'
+import Head from 'next/head';
+import Image from "next/image";
 
 import Counter from '../features/counter/Counter'
 import styles from '../styles/Home.module.css'
@@ -8,54 +10,24 @@ const IndexPage: NextPage = () => {
   return (
     <div className={styles.container}>
       <Head>
-        <title>Redux Toolkit</title>
+        <title>Redux Toolkit!!</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <header className={styles.header}>
-        <img src="/logo.svg" className={styles.logo} alt="logo" />
-        <Counter />
-        <p className='text-3xl font-bold underline'>
-          Edit <code>src/App.tsx</code> and save to reload..
-        </p>
-        <span>
-          <span>Learn </span>
-          <a
-            className={styles.link}
-            href="https://reactjs.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React
-          </a>
-          <span>, </span>
-          <a
-            className={styles.link}
-            href="https://redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux
-          </a>
-          <span>, </span>
-          <a
-            className={styles.link}
-            href="https://redux-toolkit.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Redux Toolkit
-          </a>
-          ,<span> and </span>
-          <a
-            className={styles.link}
-            href="https://react-redux.js.org/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            React Redux
-          </a>
-        </span>
-      </header>
+      <main className={styles.main}>
+        <section className={styles.leftSection}>
+          <Image src={'/images/svg/logo.svg'} alt="logo" width={357} height={291} />
+          <h1 className='font-bold text-[28px] text-[#35363A]'>Title comes here</h1>
+        <div className='w-[448px] h-[110px] text-center'>
+          <p className='text-lg font-normal text-[#35363A]'>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+        </div>
+        </section>
+       
+        <section className={styles.rightSection}>
+          <Tabs />
+        </section>
+      </main>
     </div>
   )
 }

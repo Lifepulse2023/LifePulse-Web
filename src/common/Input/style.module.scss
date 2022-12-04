@@ -1,0 +1,30 @@
+.labelWrapper {
+  font-size: 14px;
+  color: #757F90;
+  margin-bottom: 10px;
+  display: inline-block;
+}
+.appWrapperInput {
+  box-sizing: border-box;
+  border: 2px solid #e9eef7;
+  border-radius: 8px;
+  outline: none;
+  padding: 12px 14px 14px 14px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+
+  .appImage {
+    margin-right: 10px;
+    margin-left: 10px;
+  }
+
+  .appInput {
+    box-sizing: border-box;
+    outline: none;
+    border: transparent;
+    width: 100%;
+    color: #757F90;
+    font-size: 14px;
+  }
+}

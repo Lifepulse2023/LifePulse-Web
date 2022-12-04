@@ -1,5 +1,19 @@
 .container {
-  text-align: center;
+  /* text-align: center; */
+}
+
+.main {
+
+}
+
+.leftSection {
+  display: inline-block;
+  margin-left: 188px;
+}
+
+.rightSection {
+  display: inline-block;
+  width: 566px;
 }
 
 .logo {
