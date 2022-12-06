@@ -48,7 +48,7 @@ export default function AppInput(props: Attribute) {
         ) : null}
       </div>
       {props?.errors?.map((e, idx) => (
-        <div className={AppStyle.error}>
+        <div className={AppStyle.error} key={idx}>
           <SVGDanger />
           <span>{e}</span>
         </div>

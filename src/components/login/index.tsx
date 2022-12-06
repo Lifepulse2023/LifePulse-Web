@@ -8,6 +8,8 @@ import Tabs from "@common/Tabs";
 export default function Login() {
   const [isLoading, setLoading] = useState(false);
   const [isChecked, setChecked] = useState(false);
+  const [emailError, setEmailError] = useState([]);
+
   return (
     <form action="" className=" ml-[78px] mr-[78px]">
       <div className="space-y-4">
@@ -16,6 +18,29 @@ export default function Login() {
           label="Email Address"
           placeholder="Enter email address"
           prefixIconUrl="/images/svg/email.svg"
+          errors={emailError}
+          onChange= {(e: React.ChangeEvent<HTMLInputElement>) => {
+            console.log(e.target?.value);
+            if (!e.target?.value) {
+              setEmailError(arr => [
+                ...arr,
+                'Email id is Required'
+              ]);
+            }
+             else if (
+              !e.target?.value.match(
+                /^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/g
+              )
+            ){
+              setEmailError(arr => [
+                ...arr,
+                'Email id is invalid'
+              ]);
+            }
+             else {
+              setEmailError([]);
+            }
+          }}
         />
         <AppInput
           type="password"
@@ -27,11 +52,12 @@ export default function Login() {
 
         <div className="text-[#757F90]">
           <div className="flex justify-between mb-2 text-sm">
-            <div>
+            <div className="flex">
               <AppCheckbox checked={isChecked} onChange={() => {
                 setChecked(!isChecked);
               }}/>
-              Remember me
+              <span className="ml-[10px]">Remember me</span>
+              
             </div>
 
             <a href="#" className="hover:underline">

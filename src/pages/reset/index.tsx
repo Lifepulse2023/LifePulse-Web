@@ -1,5 +1,5 @@
-import AppButton from "@common/ui/Button";
-import AppInput from "@common/ui/Input";
+
+import AppButton from "@common/Button";
 import Layout from "@components/layout";
 
 export default function Reset() {

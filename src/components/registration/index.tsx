@@ -56,7 +56,8 @@ export default function Registration() {
             <div className="flex justify-between mb-2 text-[13px]">
               <div>
                 <AppCheckbox />
-                I agree to all the{" "}
+                <span className="ml-[10px]">
+                I agree to all the{" "}</span>
                 <a href="#" className="text-blue-600 hover:underline">
                   Terms of use
                 </a>{" "}
