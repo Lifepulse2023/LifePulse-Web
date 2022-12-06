@@ -9,6 +9,7 @@ margin-top: 80px;
 .leftSection {
   display: inline-block;
   margin-left: 188px;
+  vertical-align: top;
 }
 
 .rightSection {
@@ -17,7 +18,7 @@ margin-top: 80px;
   margin-left: 142px;
   border-radius: 16px;
   background-color: #ffffff;
-  box-shadow: 0px 7px 72px rgba(24, 20, 57, 0.07);
+  vertical-align: top;
 }
 
 .logo {
