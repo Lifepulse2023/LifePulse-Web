@@ -18,3 +18,7 @@ a {
 * {
   box-sizing: border-box;
 }
+
+img, svg, video, canvas, audio, iframe, embed, object {
+  display: inline-block;
+}

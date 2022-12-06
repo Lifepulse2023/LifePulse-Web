@@ -22,6 +22,7 @@ export default function Login() {
           label="Password"
           placeholder="Enter password"
           prefixIconUrl="/images/svg/lock.svg"
+          errors={['The email ID or password you entered is not correct.']}
         />
 
         <div className="text-[#757F90]">
@@ -40,7 +41,7 @@ export default function Login() {
         </div>
       </div>
       <div className="mt-6 space-y-2">
-        <div className="flex gap-x-2">
+        <div className="flex gap-x-2 bg-[#F3F7FD]">
           <AppButton
             type="button"
             suffixIconUrl="/images/svg/arrow-right.svg"
@@ -52,9 +53,10 @@ export default function Login() {
             }}
             label="Login"
             isLoading={isLoading}
+            disabled={false}
           />
         </div>
-        <p className="px-6 text-sm text-center text-[#757F90]">
+        <p className="px-6 text-sm text-center ">
           Don't have an account?
           <a href="#" className="text-blue-600 hover:underline">
             Create Account

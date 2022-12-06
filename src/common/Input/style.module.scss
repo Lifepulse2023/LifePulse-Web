@@ -1,6 +1,6 @@
 .labelWrapper {
   font-size: 14px;
-  color: #757F90;
+  color: #757f90;
   margin-bottom: 10px;
   display: inline-block;
 }
@@ -24,7 +24,22 @@
     outline: none;
     border: transparent;
     width: 100%;
-    color: #757F90;
+    color: #757f90;
     font-size: 14px;
+  }
+
+  &.errors {
+    border: 0.5px solid #e02020;
+  }
+}
+
+.error {
+  color: #e02020;
+  font-size: 12px;
+  margin: 10px 0;
+
+  span {
+    vertical-align: middle;
+    margin-left: 5px;
   }
 }

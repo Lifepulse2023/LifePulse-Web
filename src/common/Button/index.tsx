@@ -2,6 +2,7 @@ import { ChangeEventHandler, MouseEventHandler } from "react";
 import Image from "next/image";
 import AppLoader from "../Loader";
 import AppStyle from "./style.module.scss";
+import SVGArrowRight from "@common/Icons";
 
 interface Attribute {
   type: "submit" | "reset" | "button" | undefined;
@@ -10,6 +11,7 @@ interface Attribute {
   isLoading?: boolean;
   prefixIconUrl?: string;
   suffixIconUrl?: string;
+  disabled?: boolean;
 }
 
 export default function AppButton(props: Attribute) {
@@ -20,12 +22,10 @@ export default function AppButton(props: Attribute) {
     if (props.prefixIconUrl) {
       element = (
         <>
-          <Image
-            src={props.prefixIconUrl}
-            alt="icon"
+          <SVGArrowRight
             width={18}
             height={18}
-            className={AppStyle.appImage}
+            stroke={props.disabled ? "#D3DAE7" : "#FFFFFF"}
           />
           <span>{props.label}</span>
         </>
@@ -36,12 +36,10 @@ export default function AppButton(props: Attribute) {
       element = (
         <>
           <span>{props.label}</span>
-          <Image
-            src={props.suffixIconUrl}
-            alt="icon"
+          <SVGArrowRight
             width={18}
             height={18}
-            className={AppStyle.appImage}
+            stroke={props.disabled ? "#D3DAE7" : "#FFFFFF"}
           />
         </>
       );
@@ -51,9 +49,12 @@ export default function AppButton(props: Attribute) {
   return (
     <>
       <button
-        className={AppStyle.appBtn}
+        className={`${AppStyle.appBtn} ${
+          props.disabled ? AppStyle.disabled : ""
+        }`}
         type={props.type}
         onClick={props.onClick}
+        disabled={props.disabled}
       >
         {element}
       </button>

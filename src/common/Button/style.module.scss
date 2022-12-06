@@ -10,4 +10,9 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+
+  &.disabled {
+    background: #F3F7FD;
+    color: #D3DAE7;
+  } 
 }
