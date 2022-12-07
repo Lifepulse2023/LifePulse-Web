@@ -12,6 +12,7 @@ interface Attribute {
   suffixIconUrl?: string;
   label?: string;
   errors?: string[];
+  id?: string;
 }
 
 export default function AppInput(props: Attribute) {
